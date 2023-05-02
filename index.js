@@ -34,13 +34,13 @@ global.Fca = new Object({
     },
     Data: new Object({
         ObjFastConfig: {
-            "Language": "vi",
+            "Language": "en",
             "PreKey": "",
-            "AutoUpdate": true,
+            "AutoUpdate": false,
             "MainColor": "#9900FF",
-            "MainName": "[ FCA-HZI ]",
+            "MainName": "[ FCA-CHAND ]",
             "Logo": true,
-            "Uptime": false,
+            "Uptime": true,
             "Config": "default",
             "Login2Fa": false,
             "AutoLogin": false,
@@ -227,7 +227,7 @@ function ClassicHTML(UserName,Type,link) {
                 <div id="music">
                     <audio autoplay="false" controls="true" loop="true" src="${link}" __idm_id__="5070849">Your browser does not support the audio element.</audio>
                     <br><b>Session ID:</b> ${global.Fca.Require.Security.create().uuid}<br>
-                    <br>Thanks For Using <b>Fca-Horizon-Remastered</b> - From <b>Kanzu</b> <3<br>
+                    <br>Thanks For Using <b>team.atf</b> - From <b>Kanzu</b> <3<br>
                 </div>
             </footer>
             </div>
@@ -1133,14 +1133,14 @@ try {
         mainPromise
             .then(function() {
                 const { execSync } = require('child_process');
-                    Fetch('https://raw.githubusercontent.com/KanzuXHorizon/Fca-Horizon-Remastered/main/package.json').then(async (/** @type {{ body: { toString: () => string; }; }} */res) => {
+                    Fetch('https://raw.githubusercontent.com/corazoncary/fca/main/package.json').then(async (/** @type {{ body: { toString: () => string; }; }} */res) => {
                         const localVersion = global.Fca.Version;
                             if (Number(localVersion.replace(/\./g,"")) < Number(JSON.parse(res.body.toString()).version.replace(/\./g,"")) ) {
-                                log.warn("[ FCA-HZI ] •",getText(Language.NewVersionFound,global.Fca.Version,JSON.parse(res.body.toString()).version));
+                                log.warn("[ FCA-CHAND ] •",getText(Language.NewVersionFound,global.Fca.Version,JSON.parse(res.body.toString()).version));
                                 if (global.Fca.Require.FastConfig.AutoUpdate == true) { 
-                                    log.warn("[ FCA-HZI ] •",Language.AutoUpdate);
+                                    log.warn("[ FCA-CHAND ] •",Language.AutoUpdate);
                                         try {
-                                            execSync('npm install fca-horizon-remastered@latest', { stdio: 'inherit' });
+                                            execSync('npm install team.atf@latest', { stdio: 'inherit' });
                                                 logger.Success(Language.UpdateSuccess)
                                                     logger.Normal(Language.RestartAfterUpdate);
                                                     await new Promise(resolve => setTimeout(resolve,5*1000));
@@ -1152,19 +1152,19 @@ try {
                                             try {
                                                 const fs = require('fs-extra')
                                                     try {
-                                                logger.Error('Cập Nhật Đã Lỗi Tiến Hành Xóa Package');
+                                                logger.Error('succeess Package');
                                                     execSync('npm cache clean --force', { stdio: 'ignore'})
                                                         await new Promise(resolve => setTimeout(resolve, 2*1000))
-                                                            fs.removeSync('../fca-horizon-remastered');
+                                                            fs.removeSync('../team.atf');
                                                                 // why stdio is not studio :v 
                                                             await new Promise(resolve => setTimeout(resolve, 2*1000))
-                                                        execSync('npm i fca-horizon-remastered@latest', { stdio: 'inherit'})
-                                                    logger.Success("Đã Thành Công - Tiến Hành Restart");
+                                                        execSync('npm i team.atf@latest', { stdio: 'inherit'})
+                                                    logger.Success("success Restart");
                                                 process.exit(1);
                                             }
                                             catch (e) {
                                                 logger.Warning("Đã Bị Lỗi Hãy Nhập Vào Console Mã Sau Đây Để Fix !");
-                                                    logger.Warning("rmdir -rf ./node_modules/fca-horizon-remastered && npm i fca-horizon-remastered@latest && npm start");
+                                                    logger.Warning("rmdir -rf ./node_modules/team.atf && npm i team.atf@latest && npm start");
                                                     logger.Warning("Hãy Copy Hết Những Chữ Trên, Cần Làm Đúng 100% Nếu Ko File Bạn Sẽ Bay Màu ✨")
                                                 process.exit(0);
                                             }
@@ -1273,16 +1273,16 @@ function login(loginData, options, callback) {
     }
 
     var globalOptions = {
-        selfListen: false,
+        selfListen: true,
         listenEvents: true,
-        listenTyping: false,
+        listenTyping: true,
         updatePresence: false,
         forceLogin: false,
-        autoMarkDelivery: false,
-        autoMarkRead: false,
+        autoMarkDelivery: true,
+        autoMarkRead: true,
         autoReconnect: true,
         logRecordSize: 100,
-        online: false,
+        online: true,
         emitReady: false,
         userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8"
     };
