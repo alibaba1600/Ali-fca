@@ -1,6 +1,6 @@
 {
-  "name": "team-atf",
-  "version": "2.1.0",
+  "name": "Ali baba",
+  "version": "3.1.0",
   "description": "Facebook-chat-api Chand tricker YouTuber",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "lint": "./node_modules/.bin/eslint **.js",
     "prettier": "prettier utils.js src/* --write"
   },
-  "author": "Chand tricker",
+  "author": "Ali baba",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/corazoncary/fca/issues"
@@ -83,9 +83,9 @@
     }
   },
   "keywords": [
-    "Fca chand",
-    "Fca-chand-tricker",
-    "Atf fca",
-    "Team-atf"
+    "Fca baba",
+    "FCA-Ali baba",
+    "babu fca",
+    "Team-cja"
   ]
 }
