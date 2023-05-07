@@ -38,7 +38,7 @@ global.Fca = new Object({
             "PreKey": "",
             "AutoUpdate": false,
             "MainColor": "#9900FF",
-            "MainName": "[ FCA-CHAND ]",
+            "MainName": "[ FCA-ALIBABA ]",
             "Logo": true,
             "Uptime": true,
             "Config": "default",
